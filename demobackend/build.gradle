@@ -34,6 +34,10 @@ dependencies {
     implementation "com.sun.xml.bind:jaxb-core:2.2.11"
     implementation "com.sun.xml.bind:jaxb-impl:2.2.11"
     implementation "javax.activation:activation:1.1.1"
+    implementation "org.springframework.boot:spring-boot-devtools"
+
+    // https://mvnrepository.com/artifact/com.github.binarywang/weixin-java-miniapp
+    compile group: 'com.github.binarywang', name: 'weixin-java-miniapp', version: '3.5.1.B'
 
 
     compileOnly 'org.projectlombok:lombok'

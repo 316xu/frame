@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CustomUserDetailService implements UserDetailsService {
+public class CustomUserDetailServiceImpl implements UserDetailsService {
 
     @Autowired
     private UserMapper mapper;

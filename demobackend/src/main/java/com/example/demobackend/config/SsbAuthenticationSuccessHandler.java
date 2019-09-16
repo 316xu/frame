@@ -6,7 +6,6 @@ import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.crypto.codec.Base64;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.common.exceptions.UnapprovedClientAuthenticationException;
 import org.springframework.security.oauth2.provider.*;
@@ -80,7 +79,7 @@ public class SsbAuthenticationSuccessHandler extends SavedRequestAwareAuthentica
         byte[] base64Token = header.substring(6).getBytes("UTF-8");
         byte[] decoded;
         try {
-            decoded = Base64.decode(base64Token);
+            decoded = java.util.Base64.getDecoder().decode(base64Token);
         } catch (IllegalArgumentException e) {
             throw new BadCredentialsException("Failed to decode basic authentication token");
         }

@@ -13,7 +13,7 @@ public class TestController extends BaseController{
 
     @RequestMapping("/test")
     public JSONObject test() {
-        return ok("hhh");
+        return ok("hhh2");
     }
 
 }

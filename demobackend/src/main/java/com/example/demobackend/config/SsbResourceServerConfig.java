@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -76,7 +77,7 @@ public class SsbResourceServerConfig extends ResourceServerConfigurerAdapter {
                         "/code/image",
                         "/mock/**",
                         "/cmd202/**",
-                        "/**"
+                        "/wechat/**"
                 )
                 .permitAll()//以上的请求都不需要认证
                 .anyRequest()
@@ -90,4 +91,11 @@ public class SsbResourceServerConfig extends ResourceServerConfigurerAdapter {
         source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
         return source;
     }
+
+//    @Bean
+//    public AuthenticationSuccessHandler mySuccessHandler() {
+//        SavedRequestAwareAuthenticationSuccessHandler handler = new SavedRequestAwareAuthenticationSuccessHandler();
+//        handler.setDefaultTargetUrl("/courses");
+//        return handler;
+//    }
 }
