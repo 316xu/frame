@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/products/main",
     "pages/index/main",
     "pages/logs/main",
     "pages/counter/main",
-    "pages/user/main",
-    "pages/products/main"
+    "pages/user/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,7 +18,14 @@
     "selectedColor": "#333",
     "borderStyle": "white",
 
-    "list": [{
+    "list": [
+      {
+      "text": "商品列表",
+      "pagePath": "pages/products/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    },
+      {
       "text": "首页",
       "pagePath": "pages/index/main",
       "iconPath": "static/tabs/home.png",
@@ -28,14 +35,9 @@
       "pagePath": "pages/logs/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
-    },{
-      "text": "商品列表",
-      "pagePath": "pages/products/main",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
-    }
+    },
     
-    , {
+    {
       "text": "个人中心",
       "pagePath": "pages/user/main",
       "iconPath": "static/tabs/orders.png",
@@ -44,6 +46,11 @@
   ],
 
     "items": [{
+      "name": "商品列表",
+      "pagePath": "pages/products/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },{
       "name": "首页",
       "pagePath": "pages/index/main",
       "icon": "static/tabs/home.png",
@@ -53,12 +60,7 @@
       "pagePath": "pages/logs/main",
       "icon": "static/tabs/orders.png",
       "activeIcon": "static/tabs/orders-active.png"
-    }, {
-      "name": "商品列表",
-      "pagePath": "pages/products/main",
-      "icon": "static/tabs/orders.png",
-      "activeIcon": "static/tabs/orders-active.png"
-    }, {
+    },  {
       "name": "个人中心",
       "pagePath": "pages/user/main",
       "icon": "static/tabs/orders.png",
